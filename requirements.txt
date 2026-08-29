@@ -1,0 +1,15 @@
+# Abhängigkeiten der Mediathek-Suche.
+#
+# Aktuell nutzt das Projekt NUR die Python-Standardbibliothek
+# (sqlite3, lzma, http.server, urllib, json, …). Es gibt daher keinerlei
+# externe Pakete zu installieren — die Datei ist bewusst (fast) leer.
+#
+# Falls später Pakete ergänzt werden (z. B. für neue Funktionen), einfach
+# hier eintragen, z. B.:
+#
+#   fastapi>=0.110
+#   uvicorn>=0.29
+#
+# Installation im venv:
+#   source .venv/bin/activate
+#   python -m pip install -r requirements.txt
