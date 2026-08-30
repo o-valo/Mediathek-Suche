@@ -1,0 +1,182 @@
+:root {
+  --bg: #10141a;
+  --panel: #1a212b;
+  --panel-2: #212a37;
+  --text: #e6ebf2;
+  --muted: #8b98a9;
+  --accent: #4c8bf5;
+  --border: #2a3442;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  padding: 1.2rem 1.5rem;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 { font-size: 1.25rem; margin: 0; }
+
+.muted { color: var(--muted); font-weight: normal; }
+
+.status { display: flex; align-items: center; gap: 1rem; }
+
+#statText { font-size: .85rem; color: var(--muted); }
+
+.limitrow {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .6rem;
+  flex-wrap: wrap;
+}
+.limitrow .lbl {
+  color: var(--muted);
+  font-size: .8rem;
+  margin-right: .3rem;
+}
+.limitchip {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .3rem .85rem;
+  font-size: .8rem;
+  cursor: pointer;
+}
+.limitchip:hover { border-color: var(--accent); color: var(--accent); }
+.limitchip.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:disabled { opacity: .5; cursor: default; }
+
+main { max-width: 860px; margin: 0 auto; padding: 1.5rem; }
+
+#searchForm { display: flex; gap: .5rem; }
+#q {
+  flex: 1;
+  padding: .8rem 1rem;
+  font-size: 1.05rem;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  outline: none;
+}
+#q:focus { border-color: var(--accent); }
+
+.hint { color: var(--muted); min-height: 1.4rem; margin: .8rem 0; }
+
+#results { display: grid; gap: .75rem; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .9rem 1rem;
+}
+.card h3 { margin: 0 0 .3rem; font-size: 1rem; }
+.card .sender {
+  font-size: .75rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+.card .thema { color: var(--muted); font-size: .82rem; }
+.card .desc {
+  color: #c3cedb;
+  font-size: .88rem;
+  margin: .4rem 0 .6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card .meta { color: var(--muted); font-size: .78rem; }
+.card .links { margin-top: .5rem; }
+.card a {
+  color: var(--accent);
+  margin-right: .9rem;
+  font-size: .85rem;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+
+.skeleton {
+  height: 90px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--panel), var(--panel-2), var(--panel));
+  background-size: 200% 100%;
+  animation: shimmer 1.3s infinite;
+}
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+#statText.busy::before { content: "⏳ "; }
+
+.card .fmts { margin-top: .5rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+button.fmt {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .3rem .7rem;
+  font-size: .8rem;
+  font-weight: 500;
+}
+button.fmt:hover { border-color: var(--accent); color: var(--accent); }
+
+.card .subbox { margin-top: .5rem; }
+.card .subbox a { margin-right: 1rem; font-size: .8rem; }
+
+.modal {
+  position: fixed; inset: 0; z-index: 50;
+  background: rgba(0,0,0,.75);
+  display: none;
+  align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.modal.open { display: flex; }
+.modal-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  width: min(960px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+}
+.modal-head {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding: .9rem 1rem;
+  gap: 1rem;
+}
+.mtitle { font-weight: 700; }
+.msub { font-size: .8rem; }
+.modal-head button { background: var(--panel-2); padding: .25rem .6rem; }
+#modalVideo { width: 100%; display: block; background: #000; max-height: 74vh; }

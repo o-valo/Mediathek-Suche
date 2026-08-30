@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mediathek-Suche (offline)</title>
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+  <header>
+    <h1>Mediathek-Suche <span class="muted">• offline</span></h1>
+    <div class="status">
+      <span id="statText">Datenladezustand wird geprüft…</span>
+      <button id="refreshBtn" title="Frische Filmliste herunterladen &amp; neu indexieren">Neu laden</button>
+    </div>
+  </header>
+
+  <main>
+    <form id="searchForm" autocomplete="off">
+      <input
+        id="q"
+        type="search"
+        placeholder="Suche z. B. ‚Science-Fiction‘ oder ‚SciFi‘ …"
+        autofocus
+      />
+      <button type="submit">Suchen</button>
+    </form>
+    <div class="limitrow" id="limitRow" role="group" aria-label="Anzahl Treffer">
+      <span class="lbl">Treffer:</span>
+      <button type="button" class="limitchip active" data-n="20">20</button>
+      <button type="button" class="limitchip" data-n="40">40</button>
+      <button type="button" class="limitchip" data-n="100">100</button>
+      <button type="button" class="limitchip" data-n="500">500</button>
+      <button type="button" class="limitchip" data-n="1000">1000</button>
+    </div>
+
+    <p class="hint" id="hint"></p>
+
+    <section id="results" aria-live="polite"></section>
+  </main>
+
+  <footer class="muted">
+    Quelle: MediathekView-Filmliste (öffentlich-rechtliche Mediatheken).
+  </footer>
+
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <div>
+          <div id="modalTitle" class="mtitle"></div>
+          <div id="modalSub" class="msub muted"></div>
+        </div>
+        <button id="modalClose" aria-label="Schließen">✕</button>
+      </div>
+      <video id="modalVideo" controls playsinline></video>
+    </div>
+  </div>
+
+  <script src="app.js?v=3"></script>
+</body>
+</html>
