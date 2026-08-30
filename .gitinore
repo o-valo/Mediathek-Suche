@@ -1,0 +1,21 @@
+# Datenbank & heruntergeladene Dumps (werden beim Ingest erzeugt)
+filmliste.db
+filmliste.db-*
+frisch.xz
+*.xz
+
+# Virtuelle Umgebung
+.venv/
+
+# Python-Cache
+__pycache__/
+*.pyc
+
+# Logs
+server.log
+*.log
+
+# Betriebssystem/Editor
+.DS_Store
+*.swp
+
