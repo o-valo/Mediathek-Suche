@@ -16,8 +16,7 @@ Untertitel).
 
 ## Funktionen
 
-- **Vollständig offline** nach dem einmaligen Herunterladen der Filmliste
-  (~74 MB, ca. 700 000 Einträge aller öffentlich-rechtlichen Mediatheken).
+
 - **Fuzzy-/Volltextsuche** über Titel, Thema, Beschreibung und Sender
   (SQLite FTS5 mit Trigramm-Tokenizer). Teilwörter und kleinere Verschreibungen
   werden toleriert; Synonyme wie „SciFi“ → „Science Fiction“ sind eingebaut.
