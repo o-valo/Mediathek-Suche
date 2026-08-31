@@ -261,3 +261,6 @@ das neue Profil geladen wird.
 - Die Datenbankdatei `filmliste.db` darf erst nach dem ersten Ingest angefasst
   werden; während des „Neu laden“-Vorgangs einmalig längere Wartezeit
   einplanen.
+
+#### Dieser  Code wurde mit Hilfe von KI optimiert
+Powerd by ai, free-buff, DeepSeek
