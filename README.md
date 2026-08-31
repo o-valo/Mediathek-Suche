@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="media-suche.png" alt=" Mediathek-Suche Banner" width="100%">
+</p>
+
+
 # Mediathek-Suche (offline)
 
 Ein lokaler Webclient, der die [MediathekView]-Filmliste herunterlädt, in eine
