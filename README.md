@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media-suche.png" alt=" Mediathek-Suche Banner" width="100%">
+  <img src="bot-suche-2.jpg" alt=" Mediathek-Suche Banner" width="100%">
 </p>
 
 
