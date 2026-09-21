@@ -264,3 +264,19 @@ das neue Profil geladen wird.
 
 #### Dieser  Code wurde mit Hilfe von KI optimiert
 Powerd by ai, free-buff, DeepSeek
+---
+
+## Lizenz / License
+
+**GNU Affero General Public License v3.0 oder später** (AGPL-3.0-or-later) —
+vollständiger Text in [LICENSE](LICENSE).
+Copyright (C) 2026 Olav Surawski (<https://github.com/o-valo>).
+
+In Kurzform: benutzen, ändern und weitergeben ist frei erlaubt, solange
+abgeleitete Fassungen wieder unter der AGPL stehen. Abschnitt 13 greift, wenn
+eine **geänderte** Fassung als Netzdienst öffentlich erreichbar ist — dann muss
+der Quellcode dieser Fassung den Nutzern zugänglich sein.
+
+*Short version: use, modify and redistribute freely, as long as derived versions
+stay under the AGPL. Section 13 applies if you make a modified version publicly
+reachable as a network service.*
